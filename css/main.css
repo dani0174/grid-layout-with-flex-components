@@ -1,3 +1,56 @@
+/* MTM6201 Week 2 Assignment - Mark Daniels */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Comments... I love comments!  LOL  }:-) */
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #222;
@@ -12,6 +65,9 @@ body {
   .emoji h2 {
     margin: 0;
     border-bottom: 2px solid #ccc;
+    /* My own CSS content added below this point */
+    font-size: 18pt;
+    font-weight: bold;
   }
   
   .emoji a {
@@ -20,9 +76,48 @@ body {
     color: white;
     padding: 1rem;
     border-radius: 8px;
+
+    /* My own CSS content added below this point */
+    align-self: stretch;
+    margin-top: 15px;
   }
   
   .icon {
     font-size: 4rem;
   }
-  
+
+/* My own CSS content added below this point */
+
+header main footer {
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+
+h1 {
+  font-size: 24pt;
+  font-weight: bold;
+}
+
+/* Grid properties section - start */
+.emojis{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-auto-rows: auto;
+  gap: 18px;
+  padding: 5px;
+  padding-top: 25px;
+  grid-template-areas: 
+  "smiling_area clinking_area" 
+  "joy_area seedling_area";
+}
+/* Grid properties section - end */
+
+/* Flexbox properties section - start */
+.emoji {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+/* Flexbox properties section - end */
