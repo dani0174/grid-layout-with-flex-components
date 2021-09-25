@@ -76,10 +76,8 @@ body {
     color: white;
     padding: 1rem;
     border-radius: 8px;
-
     /* My own CSS content added below this point */
     align-self: stretch;
-    margin-top: 15px;
   }
   
   .icon {
@@ -103,8 +101,8 @@ h1 {
 .emojis{
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-auto-rows: auto;
-  gap: 18px;
+  grid-auto-rows: 330px;
+  gap: 5px;
   padding: 5px;
   padding-top: 25px;
   grid-template-areas: 
@@ -117,7 +115,12 @@ h1 {
 .emoji {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.emoji :nth-child(2){
+  order: -1;
+  align-self: center;
 }
 /* Flexbox properties section - end */
